@@ -51,13 +51,13 @@ function playerHasWon() {
     for (const condition of winningCombos) {
         let [a,b,c] = condition;
 
-        if (spaces[a] && (spaces[a] == spaces[b]) && (spaces[a] == spaces[c])) {
+        if (spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
             console.log([a,b,c])
             return [a,b,c]
         }
     
-        return false
     }
+    return false
 
 }
 
